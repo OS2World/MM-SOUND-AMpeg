@@ -1,0 +1,45 @@
+There are a few README files in the AMPEG43 directory that are must reads.
+
+This program and source were obtained from SimTel and compiled for OS/2 by
+myself.  It seems to run just fine as is.  If anyone finds anything out of
+the ordinary please give me a holler and I'll fix it to the best of my
+knowledge.  I say that because I just simply compiled it as is, although
+I had to modify the makefile for the encoder quite a bit to get it to
+compile properly.  I think I may try to make a soft MPEG audio CODEC for
+OS/2.  Any suggestions or help would be very appreciated.
+
+
+**Installation
+
+The OS/2 executables require EMX 0.9a FIX 06 runtime to be installed.
+
+Installation is pretty straight forward.
+
+1) Copy all the files in OS2EXE and TABLES into the same directory.
+
+2) Define an environment variable in your config.sys as follows:
+
+   SET MPEGTABLES = <path>
+
+3) Reboot.
+
+After your system reboots it should work properly.
+
+Please refer to the README.* files and RELEASE.TXT in AMPEG43 on how to
+use AMpeg.
+
+
+**DOS Executables
+
+There are DOS executables in the AMPEG43 directory.  Please refer to the
+instructions in that same directory on how to use the DOS version.
+
+
+**Disclaimer
+
+I hold no responsibility for any damage, loss, or problems encountered in
+the use of this program. It is provided as-is, and there will be no future
+versions or bug fixes (unless ISO releases another).
+
+
+Jason Bean <beannp@icon.net>

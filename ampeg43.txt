@@ -1,0 +1,7 @@
+AMpeg v4.3 is an MPEG Layer 1 & 2 decoder and a Layer 1, 2, & 3 decoder.
+
+Source by ISO, compiled for MS-DOS by John Fulmer (jfulmer@databank.com)
+
+               compiled for OS/2 by Jason Bean <beannp@icon.net>
+
+               OS/2 version requires EMX 0.9a FIX 06

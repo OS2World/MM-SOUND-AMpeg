@@ -1,0 +1,83 @@
+AMpeg  v4.3-- A simple Audio Mpeg Layer 1& 2 encoder and a Layer 1,2, & 3 decoder suite.
+
+Source by ISO, compiled for MS-DOS by John Fulmer (jfulmer@databank.com)
+
+---
+
+
+**Audio Mpeg Compression**
+
+Audio Mpeg Compression is a proposed standardized sound compression technique put out by the International Standards Organization (ISO). So far there has been three flavors, Layer 1 Layer 2, and Layer 3.  It also features the following:
+
+* 8:1 to 10:1 compression for general music audio with no audible sound degredation.
+
+* 16:1 compression for general voice audio with no audible sound degredation.
+
+* On the fly decompression and playback (the Xing Layer 2 player comes to mind).
+
+* Xing also sells a Mpeg Layer 2 MCI driver for windows, and it's own encoder/decoder/editor package for windows.
+
+*Will hopefully become a standard for audio communications.
+
+
+**AMPEG**
+
+Ampeg is a straight compile of ISO's freely available and distributed code for a Audio Mpeg Layer 1 and Layer 2 encoder and a Layer 1, 2, and 3 decoder. It was compiled using DJGPP C (the MS-DOS port of  GNU's C compiler) and falls under both IS0's and the FSF's copyrights (see ISOREL.txt and COPYING.TXT). ISO's orgional source code was only slightly changed to accomidate the DJGPP compiler's unique mindframe (a MS-DOS compiler that thinks it's a UNIX compiler, or vice versa). The orgional source code is available from ISO, or a affiliated ftp site, or the code for this version is available at the SIMTEL archive, or from me upon request. I've put minimal time into this, so don't expect perfection. It's just that no one else seems to have done the simple task of compiling this and releasing it in a usable form to the public.
+
+AMPEG runs under MS-DOS and Windows (and probably OS/2), with minimal memory requirements. Also compatable with Xing's audio MPEG Layer 2 player for Windows.
+
+The program is released as freeware and may be distributed freely, as long as this file, COPYING.TXT,  the Readme files, and all other documentation accompany it. If you don't like it, compile it yourself!
+
+Note: This program had not been optimized in any way, and runs very slowly. For encoding, a 2MB file will take 5 minutes to process and a 20MB file will take at least an hour. Decoding is much faster but still fairly slow. However, I believe in the theory that a slow, free, useful program is better than no program at all.
+
+**Directions**
+
+AMPEG is made up of three components:
+
+1) the aencode.exe program, which takes a PCM file (.WAV or .SND) and compresses it using Audio MPEG Layer 1 or Layer 2.
+
+2) the adecode.exe program, which decodes Audio MPEG files into headerless PCM files (.SND). You can use a .SND to .WAV converter to reconvert the file to a .wav format.
+
+3) the TABLE files, which both programs use to perform the MPEG compressions.
+
+There are two ways of running aencode and adecode.
+
+1) (RECOMMENED) just type AENCODE (or ADECODE) and the program will prompt you for whatever information it needs. This method is very solid and works nicely.
+
+The possible options are:
+
+Sampling Frequency  --> 44100(default), 48000, 32000
+BitRate --> 64, 128, 256, 384(default)
+Compression Layer --> 1 or 2
+
+
+2) (NOT RECOMMENDED) type AMPEGIN (or AMPEGOUT) [options] <inputfile> <outputfile>. This takes the input file and applys the program defaults and produces the output file. THIS METHOD IS NOT RECOMMENDED AND MAY CAUSE YOU TO LOSE YOUR ORIGIONAL FILE! Only specifying the input file without the output file, will cause the input file to be erased! This is a bug due to the fact that this program was written for a UNIX environment and it's not worth it to me to hunt it down.
+
+
+**Installation**
+
+AMPEG needs to know where the TABLE files are. This is a pretty clunkly installation procedure, but it works....
+
+1) put all non-text and non-executable files that were included in this .ZIP file into a directory by themselves called TABLESES.  Not good english, but necessary to get around a bug
+
+2) AMPEG MUST BE RUN FROM the directory ABOVE TABLESES (ie, if TABLESES is located in C:/util/tables; AMPEG must be run from the C:/util directory).
+
+3) Alternatively you can create a environment variable to point to TABLES. Add the following line to your autoexec.bat file:
+
+SET MPEGTABLES = C:\<path>\TABLES
+
+where <path> is the path to the TABLESES directory. It seems that AMPEG looks for a directory whose name get corrupted somewhere in the AMPEG code. So if you name the directory "TABLESES" AMPEG will find it if 'TABLES'  is in the SET statement, if you name it "CHAIRSRS" Ampeg needs to be told "Chairs" in the Set statement. Anyway AMPEG should now run.
+
+**Changes since 1.0 (first and last version)**
+
+*Changed version name to match ISO's version.
+*Found decoder source with layer 3 decompression.
+*decompression runs MUCH faster.
+
+**Disclaimer**
+
+I hold no responsibility for any damage, loss, or problems encountered in the use of this program. It is provided as-is, and there will be no future versions or bug fixes (unless ISO releases another).
+
+
+John Fulmer (jfulmer@databank.com)
+

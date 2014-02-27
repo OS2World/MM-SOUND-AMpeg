@@ -1,0 +1,8 @@
+Test.MP2
+
+This test file was ripped from a CD (the best of the Partridge Family, in case you didn't notice), 
+and is a 16-bit file at 44.1 Khz. The origional file size was exactly 1 MB, and the resultant file after being compressed by Ampeg, using audio MPEG Layer 2, at a 128k bitrate, is around 90k, which is approx. 11:1 compression. Decompressed, it shows very little fidelity loss. 
+
+Not too shabby, eh?
+
+jf
